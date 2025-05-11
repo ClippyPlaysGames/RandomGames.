@@ -1,0 +1,422 @@
+[gd_scene load_steps=23 format=3 uid="uid://cygv7bajgttnv"]
+
+[ext_resource type="Script" path="res://RandomGames/survival.gd" id="1_ehm27"]
+[ext_resource type="Theme" uid="uid://djsgmb8bfvjoo" path="res://RandomGames/Button-Size.tres" id="2_e7gro"]
+[ext_resource type="Theme" uid="uid://cdflh5v5gfe7w" path="res://RandomGames/Resources.tres" id="2_ttanf"]
+[ext_resource type="Theme" uid="uid://dfvc8wsr3p84l" path="res://RandomGames/Inventory.tres" id="2_x1836"]
+
+[sub_resource type="Theme" id="Theme_wvk74"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_a2q0c"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_0qx1j"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_82j26"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_nmlnp"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_im46a"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_ua0h1"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_ly6we"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_c04rc"]
+default_font_size = 18
+
+[sub_resource type="Theme" id="Theme_fraly"]
+default_font_size = 18
+
+[sub_resource type="Theme" id="Theme_hpvlh"]
+default_font_size = 18
+
+[sub_resource type="Theme" id="Theme_j3vfi"]
+default_font_size = 18
+
+[sub_resource type="Theme" id="Theme_k76q4"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_h4dvi"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_jmww1"]
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_runga"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_rmavv"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_yxg8a"]
+default_font_size = 25
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehm27")
+
+[node name="Skills" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lumber_Skill" type="Label" parent="Skills"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 410.0
+offset_bottom = 115.0
+theme = SubResource("Theme_wvk74")
+text = "Lumberjacking Skill: 0/10"
+
+[node name="Mining_Skill" type="Label" parent="Skills"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 410.0
+offset_bottom = 165.0
+theme = SubResource("Theme_a2q0c")
+text = "Mining Skill: 0/10"
+
+[node name="Hunt_Skill" type="Label" parent="Skills"]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 410.0
+offset_bottom = 215.0
+theme = SubResource("Theme_0qx1j")
+text = "Hunting Skill: 0/10"
+
+[node name="Hide_Skill" type="Button" parent="Skills"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 1150.0
+offset_bottom = 650.0
+theme = SubResource("Theme_82j26")
+text = "Hide Skills Tab
+"
+
+[node name="Resources" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Axe_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 225.0
+offset_right = 445.0
+offset_bottom = 65.0
+theme = ExtResource("2_ttanf")
+text = "Make an axe"
+
+[node name="Dag_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 170.0
+offset_right = 445.0
+offset_bottom = 235.0
+theme = SubResource("Theme_nmlnp")
+text = "Make a dagger"
+
+[node name="Ore_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 85.0
+offset_right = 680.0
+offset_bottom = 163.0
+theme = SubResource("Theme_im46a")
+text = "Mine for ore
+(needs a pickaxe)"
+
+[node name="Pick_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 85.0
+offset_right = 445.0
+offset_bottom = 150.0
+theme = ExtResource("2_ttanf")
+text = "Make a pickaxe"
+
+[node name="Stick_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_top = 85.0
+offset_right = 220.0
+offset_bottom = 150.0
+theme = ExtResource("2_ttanf")
+text = "Search for sticks"
+
+[node name="Stone_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 65.0
+theme = ExtResource("2_ttanf")
+text = "Search for stones"
+
+[node name="Raw_Meat_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 170.0
+offset_right = 676.0
+offset_bottom = 248.0
+theme = SubResource("Theme_ua0h1")
+text = "Go hunting
+ (needs a weapon)
+"
+
+[node name="Wood_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 670.0
+offset_bottom = 68.0
+theme = ExtResource("2_ttanf")
+text = "Chop a tree
+ (needs an axe)"
+
+[node name="Hide_Res" type="Button" parent="Resources"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 1150.0
+offset_bottom = 650.0
+theme = SubResource("Theme_ly6we")
+text = "Hide Resources Tab
+"
+
+[node name="Spear_Up" type="Button" parent="Resources"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 255.0
+offset_right = 445.0
+offset_bottom = 320.0
+theme = ExtResource("2_ttanf")
+text = "Make a spear
+"
+
+[node name="Inventory" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cook_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 150.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme = SubResource("Theme_c04rc")
+text = "Cooked Meat: 0"
+
+[node name="Raw_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 120.0
+offset_right = 150.0
+offset_bottom = 146.0
+theme = SubResource("Theme_fraly")
+text = "Raw Meat: 0"
+
+[node name="Stick_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 86.0
+theme = ExtResource("2_x1836")
+text = "Sticks: 0"
+
+[node name="Stone_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 30.0
+offset_right = 200.0
+offset_bottom = 56.0
+theme = ExtResource("2_x1836")
+text = "Stone: 0
+"
+
+[node name="Wood_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 90.0
+offset_right = 200.0
+offset_bottom = 116.0
+theme = SubResource("Theme_hpvlh")
+text = "Wood: 0
+"
+
+[node name="Axe_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 30.0
+offset_right = 345.0
+offset_bottom = 56.0
+theme = ExtResource("2_x1836")
+text = "Axe: 0"
+
+[node name="Dag_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 90.0
+offset_right = 345.0
+offset_bottom = 116.0
+theme = SubResource("Theme_j3vfi")
+text = "Dagger: 0
+"
+
+[node name="Pick_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 60.0
+offset_right = 345.0
+offset_bottom = 86.0
+theme = ExtResource("2_x1836")
+text = "Pickaxe: 0"
+
+[node name="Hide_INV" type="Button" parent="Inventory"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 1150.0
+offset_bottom = 650.0
+theme = SubResource("Theme_k76q4")
+text = "Hide Inventory Tab
+"
+
+[node name="Ore_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 180.0
+offset_right = 200.0
+offset_bottom = 206.0
+theme = ExtResource("2_x1836")
+text = "Ore: 0"
+
+[node name="Spear_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 120.0
+offset_right = 345.0
+offset_bottom = 146.0
+theme = ExtResource("2_x1836")
+text = "Spear: 0"
+
+[node name="Cooking" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cook_Up" type="Button" parent="Cooking"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 110.0
+theme = SubResource("Theme_h4dvi")
+text = "Cook Raw Meat"
+
+[node name="Hide_Cook" type="Button" parent="Cooking"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 1150.0
+offset_bottom = 650.0
+theme = SubResource("Theme_jmww1")
+text = "Hide Cooking Tab
+"
+
+[node name="Main_Form" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Show_Res" type="Button" parent="Main_Form"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 540.0
+offset_right = 425.0
+offset_bottom = 640.0
+theme = ExtResource("2_ttanf")
+text = "Show Resource 
+Tab"
+
+[node name="Show_Skill" type="Button" parent="Main_Form"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 540.0
+offset_right = 215.0
+offset_bottom = 640.0
+theme = ExtResource("2_ttanf")
+text = "Show Skills Tab"
+
+[node name="Show_INV" type="Button" parent="Main_Form"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 540.0
+offset_right = 635.0
+offset_bottom = 640.0
+theme = SubResource("Theme_runga")
+text = "Show Inventory
+Tab
+"
+
+[node name="Energy_Up" type="Button" parent="Main_Form"]
+layout_mode = 0
+offset_left = 920.0
+offset_right = 1120.0
+offset_bottom = 100.0
+theme = ExtResource("2_e7gro")
+text = "Rest"
+
+[node name="Show_Cooking" type="Button" parent="Main_Form"]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 540.0
+offset_right = 845.0
+offset_bottom = 640.0
+theme = SubResource("Theme_rmavv")
+text = "Show Cooking
+Tab
+"
+
+[node name="Energy" type="Label" parent="Main_Form"]
+layout_mode = 0
+offset_right = 163.0
+offset_bottom = 35.0
+theme = SubResource("Theme_yxg8a")
+text = "Energy: 20/20"
+
+[connection signal="pressed" from="Skills/Hide_Skill" to="." method="_on_hide_skill_pressed"]
+[connection signal="pressed" from="Resources/Axe_Up" to="." method="_on_axe_up_pressed"]
+[connection signal="pressed" from="Resources/Dag_Up" to="." method="_on_dag_up_pressed"]
+[connection signal="pressed" from="Resources/Ore_Up" to="." method="_on_ore_up_pressed"]
+[connection signal="pressed" from="Resources/Pick_Up" to="." method="_on_pick_up_pressed"]
+[connection signal="pressed" from="Resources/Stick_Up" to="." method="_on_stick_up_pressed"]
+[connection signal="pressed" from="Resources/Stone_Up" to="." method="_on_stone_up_pressed"]
+[connection signal="pressed" from="Resources/Raw_Meat_Up" to="." method="_on_raw_meat_up_pressed"]
+[connection signal="pressed" from="Resources/Raw_Meat_Up" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Resources/Wood_Up" to="." method="_on_wood_up_pressed"]
+[connection signal="pressed" from="Resources/Hide_Res" to="." method="_on_hide_res_pressed"]
+[connection signal="pressed" from="Resources/Spear_Up" to="." method="_on_spear_up_pressed"]
+[connection signal="pressed" from="Inventory/Hide_INV" to="." method="_on_hide_inv_pressed"]
+[connection signal="pressed" from="Cooking/Cook_Up" to="." method="_on_cook_up_pressed"]
+[connection signal="pressed" from="Cooking/Hide_Cook" to="." method="_on_hide_cook_pressed"]
+[connection signal="pressed" from="Main_Form/Show_Res" to="." method="_on_show_res_pressed"]
+[connection signal="pressed" from="Main_Form/Show_Skill" to="." method="_on_show_skill_pressed"]
+[connection signal="pressed" from="Main_Form/Show_INV" to="." method="_on_show_inv_pressed"]
+[connection signal="pressed" from="Main_Form/Energy_Up" to="." method="_on_energy_up_pressed"]
+[connection signal="pressed" from="Main_Form/Show_Cooking" to="." method="_on_show_cooking_pressed"]
