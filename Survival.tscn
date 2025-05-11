@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=3 uid="uid://cygv7bajgttnv"]
 
-[ext_resource type="Script" path="res://RandomGames/survival.gd" id="1_ehm27"]
-[ext_resource type="Theme" uid="uid://djsgmb8bfvjoo" path="res://RandomGames/Button-Size.tres" id="2_e7gro"]
-[ext_resource type="Theme" uid="uid://cdflh5v5gfe7w" path="res://RandomGames/Resources.tres" id="2_ttanf"]
-[ext_resource type="Theme" uid="uid://dfvc8wsr3p84l" path="res://RandomGames/Inventory.tres" id="2_x1836"]
+[ext_resource type="Script" path="res://RandomGames/survival.gd" id="1_jf2gp"]
+[ext_resource type="Theme" uid="uid://cdflh5v5gfe7w" path="res://RandomGames/Resources.tres" id="2_vm37g"]
+[ext_resource type="Theme" uid="uid://dfvc8wsr3p84l" path="res://RandomGames/Inventory.tres" id="3_vffbn"]
+[ext_resource type="Theme" uid="uid://djsgmb8bfvjoo" path="res://RandomGames/Button-Size.tres" id="4_svapx"]
 
 [sub_resource type="Theme" id="Theme_wvk74"]
 default_font_size = 30
@@ -70,7 +70,7 @@ offset_right = 2.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ehm27")
+script = ExtResource("1_jf2gp")
 
 [node name="Skills" type="Control" parent="."]
 visible = false
@@ -122,7 +122,7 @@ layout_mode = 0
 offset_left = 225.0
 offset_right = 445.0
 offset_bottom = 65.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Make an axe"
 
 [node name="Dag_Up" type="Button" parent="Resources"]
@@ -150,7 +150,7 @@ offset_left = 225.0
 offset_top = 85.0
 offset_right = 445.0
 offset_bottom = 150.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Make a pickaxe"
 
 [node name="Stick_Up" type="Button" parent="Resources"]
@@ -158,14 +158,14 @@ layout_mode = 0
 offset_top = 85.0
 offset_right = 220.0
 offset_bottom = 150.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Search for sticks"
 
 [node name="Stone_Up" type="Button" parent="Resources"]
 layout_mode = 0
 offset_right = 220.0
 offset_bottom = 65.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Search for stones"
 
 [node name="Raw_Meat_Up" type="Button" parent="Resources"]
@@ -184,7 +184,7 @@ layout_mode = 0
 offset_left = 450.0
 offset_right = 670.0
 offset_bottom = 68.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Chop a tree
  (needs an axe)"
 
@@ -203,7 +203,7 @@ offset_left = 225.0
 offset_top = 255.0
 offset_right = 445.0
 offset_bottom = 320.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Make a spear
 "
 
@@ -236,7 +236,7 @@ offset_left = 25.0
 offset_top = 60.0
 offset_right = 200.0
 offset_bottom = 86.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Sticks: 0"
 
 [node name="Stone_INV" type="Label" parent="Inventory"]
@@ -245,7 +245,7 @@ offset_left = 25.0
 offset_top = 30.0
 offset_right = 200.0
 offset_bottom = 56.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Stone: 0
 "
 
@@ -265,7 +265,7 @@ offset_left = 170.0
 offset_top = 30.0
 offset_right = 345.0
 offset_bottom = 56.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Axe: 0"
 
 [node name="Dag_INV" type="Label" parent="Inventory"]
@@ -284,7 +284,7 @@ offset_left = 170.0
 offset_top = 60.0
 offset_right = 345.0
 offset_bottom = 86.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Pickaxe: 0"
 
 [node name="Hide_INV" type="Button" parent="Inventory"]
@@ -302,7 +302,7 @@ offset_left = 25.0
 offset_top = 180.0
 offset_right = 200.0
 offset_bottom = 206.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Ore: 0"
 
 [node name="Spear_INV" type="Label" parent="Inventory"]
@@ -311,7 +311,7 @@ offset_left = 170.0
 offset_top = 120.0
 offset_right = 345.0
 offset_bottom = 146.0
-theme = ExtResource("2_x1836")
+theme = ExtResource("3_vffbn")
 text = "Spear: 0"
 
 [node name="Cooking" type="Control" parent="."]
@@ -350,7 +350,7 @@ offset_left = 225.0
 offset_top = 540.0
 offset_right = 425.0
 offset_bottom = 640.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Show Resource 
 Tab"
 
@@ -360,7 +360,7 @@ offset_left = 15.0
 offset_top = 540.0
 offset_right = 215.0
 offset_bottom = 640.0
-theme = ExtResource("2_ttanf")
+theme = ExtResource("2_vm37g")
 text = "Show Skills Tab"
 
 [node name="Show_INV" type="Button" parent="Main_Form"]
@@ -379,7 +379,7 @@ layout_mode = 0
 offset_left = 920.0
 offset_right = 1120.0
 offset_bottom = 100.0
-theme = ExtResource("2_e7gro")
+theme = ExtResource("4_svapx")
 text = "Rest"
 
 [node name="Show_Cooking" type="Button" parent="Main_Form"]
