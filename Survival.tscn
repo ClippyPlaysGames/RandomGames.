@@ -288,6 +288,93 @@ offset_bottom = 113.0
 theme = ExtResource("4_kn8dv")
 text = "Spear: 2 Wood + 1 Stone"
 
+[node name="Bow_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 166.0
+offset_bottom = 143.0
+theme = ExtResource("4_kn8dv")
+text = "Bow: 4 Sicks + 3 Vines"
+
+[node name="Arrow_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 181.0
+offset_bottom = 173.0
+theme = ExtResource("4_kn8dv")
+text = "Arrow: 1 Stick + 1 Stone"
+
+[node name="Wood_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 680.0
+offset_bottom = 35.0
+theme = ExtResource("4_kn8dv")
+text = "Wood: Axe + Chopping Tree"
+
+[node name="Ore_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 30.0
+offset_right = 408.0
+offset_bottom = 65.0
+theme = ExtResource("4_kn8dv")
+text = "Ore: Pickaxe + Mining"
+
+[node name="Vine_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 60.0
+offset_right = 507.0
+offset_bottom = 83.0
+theme = ExtResource("4_kn8dv")
+text = "Vine: Dagger + Vines"
+
+[node name="Raw_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 90.0
+offset_right = 755.0
+offset_bottom = 125.0
+theme = ExtResource("4_kn8dv")
+text = "Raw Meat: Any weapon + Hunting"
+
+[node name="Brk_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 120.0
+offset_right = 456.0
+offset_bottom = 143.0
+theme = ExtResource("4_kn8dv")
+text = "Brick: 4 Stone"
+
+[node name="Frg_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 150.0
+offset_right = 539.0
+offset_bottom = 185.0
+theme = ExtResource("4_kn8dv")
+text = "Forge: 30 Bricks"
+
+[node name="Mtl_Rec" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 180.0
+offset_right = 670.0
+offset_bottom = 253.0
+theme = ExtResource("4_kn8dv")
+text = "Metal Bar: 1 Ore + 3 Wood "
+
+[node name="Mtl_Rec2" type="Label" parent="Recipes"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 210.0
+offset_right = 666.0
+offset_bottom = 245.0
+theme = ExtResource("4_kn8dv")
+text = "(also requires the forge)"
+
 [node name="Resources" type="Control" parent="."]
 visible = false
 anchors_preset = 0
