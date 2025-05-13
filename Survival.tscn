@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cygv7bajgttnv"]
+[gd_scene load_steps=26 format=3 uid="uid://cygv7bajgttnv"]
 
 [ext_resource type="Script" path="res://RandomGames/survival.gd" id="1_jf2gp"]
 [ext_resource type="Theme" uid="uid://ck4otwq4fvvwb" path="res://RandomGames/Hide.tres" id="2_rvj7n"]
@@ -59,6 +59,9 @@ default_font_size = 25
 default_font_size = 25
 
 [sub_resource type="Theme" id="Theme_yxg8a"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_sge1o"]
 default_font_size = 25
 
 [node name="Control" type="Control"]
@@ -244,6 +247,7 @@ theme = ExtResource("3_vffbn")
 text = "Arrow: 0"
 
 [node name="Recipes" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -564,7 +568,6 @@ text = "Hide Skills Tab
 "
 
 [node name="Main_Form" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -627,14 +630,23 @@ offset_left = 920.0
 offset_right = 1120.0
 offset_bottom = 100.0
 theme = ExtResource("4_svapx")
-text = "Rest"
+text = "Eat some 
+food"
 
 [node name="Energy" type="Label" parent="Main_Form"]
 layout_mode = 0
+offset_top = 30.0
 offset_right = 163.0
-offset_bottom = 35.0
+offset_bottom = 65.0
 theme = SubResource("Theme_yxg8a")
 text = "Energy: 20/20"
+
+[node name="Health" type="Label" parent="Main_Form"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = SubResource("Theme_sge1o")
+text = "Health: 10/10"
 
 [connection signal="pressed" from="Cooking/Cook_Up" to="." method="_on_cook_up_pressed"]
 [connection signal="pressed" from="Cooking/Hide_Cook" to="." method="_on_hide_cook_pressed"]

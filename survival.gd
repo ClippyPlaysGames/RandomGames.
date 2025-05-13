@@ -44,7 +44,7 @@ var hunt_exp   = 10
 var hunt_lvl   = 1
 
 # MISC Features
-var heath      = 10
+var health      = 10
 var max_health = 10
 var energy     = 20
 var max_energy = 20
@@ -75,6 +75,25 @@ func Update_Dagger_HTH():
 
 func Update_Raw_Meat():
 	$Inventory/Raw_INV.text = "Raw Meat: " + str(raw_meat)
+	
+func Update_Cook_Meat():
+	$Inventory/Cook_INV.text = "Cooked Meat: " + str(cooked_meat)
+
+func pass_out():
+	energy += 5
+	OS.alert("You passed out, you lost some resources")
+	if stick >= 3:
+		stick -= 3
+		Update_Stick()
+	elif stick < 3:
+		stick -= stick
+		Update_Stick()
+	if stone >= 3:
+		stone -= 3
+		Update_Stone()
+	elif stone < 3:
+		stone -= stone
+		Update_Stone()
 
 func _on_stone_up_pressed() -> void:
 	stone += 1
@@ -105,6 +124,8 @@ func _on_wood_up_pressed() -> void:
 			wood += lumb_lvl
 			lumb_skill += 1
 			energy -= 1
+			if energy == 0:
+				pass_out()
 			Update_Energy()
 			Update_Wood()
 			if lumb_skill == lumb_exp:
@@ -136,6 +157,8 @@ func _on_ore_up_pressed() -> void:
 				min_lvl += 1
 			$Skills/Mining_Skill.text = "Mining Skill: " + str(min_skill) + "/" + str(min_exp)
 			energy -= 1
+			if energy == 0:
+				pass_out()
 			Update_Energy()
 			pick_hth -= 1
 			if pick_hth == 0:
@@ -156,6 +179,7 @@ func _on_pick_up_pressed() -> void:
 		pick += 1
 		stick -= 3
 		stone -= 3
+		pick_hth = 8
 		Update_Stone()
 		Update_Stick()
 		$Inventory/Pick_INV.text = "Pickaxe: "  + str(pick) + "           " + str(pick_hth) + "/8"
@@ -251,18 +275,21 @@ func _on_dag_up_pressed() -> void:
 	if dagger == 1:
 		OS.alert("You can only have one dagger at a time")
 	elif stone >= 1 and stick >= 1:
-		dagger += 1
-		dagger_hth = 4
-		stone -= 1
+		dagger = 1
 		stick -= 1
+		stone -= 1
+		dagger_hth = 4
+		$Inventory/Dag_INV.text = "Dagger: "  + str(dagger) + "           " + str(dagger_hth) + "/4"
 		Update_Stone()
 		Update_Stick()
-		$Inventory/Dag_INV.text = "Dagger: " + str(dagger) + "            " + str(dagger_hth) + "/" + "4" 
 
 
 func _on_raw_meat_up_pressed() -> void:
 	if bow == 1 and arrow >= 1:
 		raw_meat += 3 + hunt_lvl
+		energy -= 2
+		if energy <= 0:
+			pass_out()
 		arrow -= 1
 		bow_hth -= 1
 		if bow_hth == 0:
@@ -278,6 +305,8 @@ func _on_raw_meat_up_pressed() -> void:
 		hunt_skill += 2
 		spear_hth -= 1
 		energy -= 2
+		if energy <= 0:
+			pass_out()
 		Update_Energy()
 		$Inventory/Spear_INV.text = "Spear: 1" + "              " + str(spear_hth) + "/" + "6" 
 		if spear_hth == 0:
@@ -291,6 +320,8 @@ func _on_raw_meat_up_pressed() -> void:
 		hunt_skill += 1
 		dagger_hth -= 1
 		energy -= 4
+		if energy <= 0:
+			pass_out()
 		Update_Energy()
 		$Inventory/Dag_INV.text = "Dagger: 1" + "            " + str(dagger_hth) + "/" + "4" 
 		if dagger_hth == 0:
@@ -306,22 +337,39 @@ func _on_raw_meat_up_pressed() -> void:
 
 
 func _on_energy_up_pressed() -> void:
-	if energy >= max_energy:
-		energy = max_energy
-	elif energy < max_energy:
-		energy += 2
-		$Main_Form/Energy.text = "Energy: " + str(energy) + "/" + str(max_energy)
+	if cooked_meat >= 1:
+		cooked_meat -= 1
+		Update_Cook_Meat()
+		health += 3
+		$Main_Form/Health.text = "Health: " + str(health) + "/" + str(max_health)
+		energy += 6
+		Update_Energy()
+	elif raw_meat >= 1:
+		raw_meat -= 1
+		Update_Raw_Meat()
+		health -= 3
+		$Main_Form/Health.text = "Health: " + str(health) + "/" + str(max_health)
+		energy += 3
+		Update_Energy()
+	else: 
+		OS.alert("You don't have any food")
 
 
 func _on_cook_up_pressed() -> void:
 	if raw_meat >= 1 and wood >=1:
 		cooked_meat += 1
+		Update_Cook_Meat()
 		raw_meat -= 1
-		$Inventory/Cook_INV.text = "Cooked Meat: " + str(cooked_meat)
+		Update_Raw_Meat()
+		energy -= 1
+		Update_Energy()
 	elif raw_meat >= 1 and stick >= 2:
 		cooked_meat += 1
+		Update_Cook_Meat()
 		raw_meat -= 1
-		$Inventory/Cook_INV.text = "Cooked Meat: " + str(cooked_meat)
+		Update_Raw_Meat()
+		energy -= 1
+		Update_Energy()
 	elif raw_meat == 0:
 		OS.alert("You don't have enough raw meat")
 	elif wood == 0 and stick <= 1:
