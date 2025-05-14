@@ -98,7 +98,6 @@ text = "Hide Cooking Tab
 "
 
 [node name="Inventory" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -180,27 +179,27 @@ text = "Brick: 0
 
 [node name="Axe_INV" type="Label" parent="Inventory"]
 layout_mode = 0
-offset_left = 170.0
+offset_left = 175.0
 offset_top = 30.0
-offset_right = 345.0
+offset_right = 350.0
 offset_bottom = 56.0
 theme = ExtResource("3_vffbn")
 text = "Axe: 0"
 
 [node name="Pick_INV" type="Label" parent="Inventory"]
 layout_mode = 0
-offset_left = 170.0
+offset_left = 175.0
 offset_top = 60.0
-offset_right = 345.0
+offset_right = 350.0
 offset_bottom = 86.0
 theme = ExtResource("3_vffbn")
 text = "Pickaxe: 0"
 
 [node name="Dag_INV" type="Label" parent="Inventory"]
 layout_mode = 0
-offset_left = 170.0
+offset_left = 175.0
 offset_top = 90.0
-offset_right = 345.0
+offset_right = 350.0
 offset_bottom = 116.0
 theme = SubResource("Theme_j3vfi")
 text = "Dagger: 0
@@ -208,9 +207,9 @@ text = "Dagger: 0
 
 [node name="Spear_INV" type="Label" parent="Inventory"]
 layout_mode = 0
-offset_left = 170.0
+offset_left = 175.0
 offset_top = 120.0
-offset_right = 345.0
+offset_right = 350.0
 offset_bottom = 146.0
 theme = ExtResource("3_vffbn")
 text = "Spear: 0"
@@ -241,6 +240,15 @@ offset_right = 350.0
 offset_bottom = 206.0
 theme = ExtResource("3_vffbn")
 text = "Arrow: 0"
+
+[node name="Metal_INV" type="Label" parent="Inventory"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 270.0
+offset_right = 130.0
+offset_bottom = 296.0
+theme = ExtResource("3_vffbn")
+text = "Metal Bar: 0"
 
 [node name="Recipes" type="Control" parent="."]
 visible = false
@@ -634,6 +642,7 @@ text = "Hide Skills Tab
 "
 
 [node name="Main_Form" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

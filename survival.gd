@@ -448,6 +448,7 @@ func _on_metal_up_pressed() -> void:
 		wood -= 3
 		$Inventory/Ore_INV.text = "Ore: " + str(ore)
 		Update_Wood()
+		$Inventory/Metal_INV.text = "Metal Bar: " + str(metal)
 	elif forge == 0:
 		OS.alert("You need a forge to smelt ore")
 	elif ore == 0:
