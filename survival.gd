@@ -454,3 +454,47 @@ func _on_metal_up_pressed() -> void:
 		OS.alert("You need atleast one ore to use this")
 	elif wood < 3:
 		OS.alert("You need atleast three pieces of wood to use this")
+
+
+func _on_res_tab_pressed() -> void:
+	$Resources/ResTab.visible = false
+	$Resources/Tools.visible = false
+	$Resources/Buildings.visible = false
+	$Resources/ToolTab.visible = true
+	$Resources/BldTab.visible = true
+	$Resources/Resource.visible = true
+
+
+func _on_tool_tab_pressed() -> void:
+	$Resources/ToolTab.visible = false
+	$Resources/Resource.visible = false
+	$Resources/Buildings.visible = false
+	$Resources/Tools.visible = true
+	$Resources/ResTab.visible = true
+	$Resources/BldTab.visible = true
+	
+	
+
+
+func _on_bld_tab_pressed() -> void:
+	$Resources/BldTab.visible = false
+	$Resources/Tools.visible = false
+	$Resources/Resource.visible = false
+	$Resources/Buildings.visible = true
+	$Resources/ResTab.visible = true
+	$Resources/ToolTab.visible = true
+
+
+func _on_hide_res_tab_pressed() -> void:
+	$Resources/Resource.visible = false
+	$Resources/ResTab.visible = true
+
+
+func _on_hide_tools_tab_pressed() -> void:
+	$Resources/ToolTab.visible = true
+	$Resources/Tools.visible = false
+
+
+func _on_hide_build_tab_pressed() -> void:
+	$Resources/BldTab.visible = true
+	$Resources/Buildings.visible = false

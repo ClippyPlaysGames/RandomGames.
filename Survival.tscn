@@ -25,13 +25,13 @@ default_font_size = 18
 [sub_resource type="Theme" id="Theme_k76q4"]
 default_font_size = 50
 
-[sub_resource type="Theme" id="Theme_nmlnp"]
+[sub_resource type="Theme" id="Theme_ua0h1"]
 default_font_size = 25
 
 [sub_resource type="Theme" id="Theme_im46a"]
 default_font_size = 25
 
-[sub_resource type="Theme" id="Theme_ua0h1"]
+[sub_resource type="Theme" id="Theme_nmlnp"]
 default_font_size = 25
 
 [sub_resource type="Theme" id="Theme_ly6we"]
@@ -69,10 +69,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 2.0
-offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jf2gp")
@@ -382,136 +378,173 @@ text = "(also requires the forge)"
 [node name="Resources" type="Control" parent="."]
 visible = false
 anchors_preset = 0
+offset_left = -10.0
+offset_top = -3.0
+offset_right = 30.0
+offset_bottom = 37.0
+
+[node name="Resource" type="Control" parent="Resources"]
+visible = false
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Axe_Up" type="Button" parent="Resources"]
+[node name="Stick_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 225.0
-offset_right = 445.0
-offset_bottom = 65.0
-theme = ExtResource("2_vm37g")
-text = "Make an axe"
-
-[node name="Dag_Up" type="Button" parent="Resources"]
-layout_mode = 0
-offset_left = 225.0
-offset_top = 170.0
-offset_right = 445.0
-offset_bottom = 235.0
-theme = SubResource("Theme_nmlnp")
-text = "Make a dagger"
-
-[node name="Ore_Up" type="Button" parent="Resources"]
-layout_mode = 0
-offset_left = 450.0
+offset_left = 350.0
 offset_top = 85.0
-offset_right = 680.0
-offset_bottom = 163.0
-theme = SubResource("Theme_im46a")
-text = "Mine for ore
-(needs a pickaxe)"
-
-[node name="Pick_Up" type="Button" parent="Resources"]
-layout_mode = 0
-offset_left = 225.0
-offset_top = 85.0
-offset_right = 445.0
-offset_bottom = 150.0
-theme = ExtResource("2_vm37g")
-text = "Make a pickaxe"
-
-[node name="Stick_Up" type="Button" parent="Resources"]
-layout_mode = 0
-offset_top = 85.0
-offset_right = 220.0
+offset_right = 570.0
 offset_bottom = 150.0
 theme = ExtResource("2_vm37g")
 text = "Search for sticks"
 
-[node name="Stone_Up" type="Button" parent="Resources"]
+[node name="Stone_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_right = 220.0
+offset_left = 350.0
+offset_right = 570.0
 offset_bottom = 65.0
 theme = ExtResource("2_vm37g")
 text = "Search for stones"
 
-[node name="Raw_Meat_Up" type="Button" parent="Resources"]
+[node name="Vine_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 684.0
+offset_top = 170.0
+offset_right = 910.0
+offset_bottom = 248.0
+theme = ExtResource("2_vm37g")
+text = "Cut down vines
+(needs a dagger)"
+
+[node name="Wood_Up" type="Button" parent="Resources/Resource"]
+layout_mode = 0
+offset_left = 684.0
+offset_right = 904.0
+offset_bottom = 78.0
+theme = ExtResource("2_vm37g")
+text = "Chop a tree
+ (needs an axe)"
+
+[node name="Raw_Meat_Up" type="Button" parent="Resources/Resource"]
+layout_mode = 0
+offset_left = 684.0
 offset_top = 255.0
-offset_right = 676.0
+offset_right = 910.0
 offset_bottom = 333.0
 theme = SubResource("Theme_ua0h1")
 text = "Go hunting
  (needs a weapon)
 "
 
-[node name="Vine_Up" type="Button" parent="Resources"]
+[node name="Ore_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 450.0
-offset_top = 170.0
-offset_right = 676.0
-offset_bottom = 248.0
-theme = ExtResource("2_vm37g")
-text = "Cut down vines
-(needs a dagger)"
+offset_left = 684.0
+offset_top = 85.0
+offset_right = 914.0
+offset_bottom = 163.0
+theme = SubResource("Theme_im46a")
+text = "Mine for ore
+(needs a pickaxe)"
 
-[node name="Wood_Up" type="Button" parent="Resources"]
+[node name="Metal_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 450.0
-offset_right = 670.0
-offset_bottom = 68.0
-theme = ExtResource("2_vm37g")
-text = "Chop a tree
- (needs an axe)"
-
-[node name="Hide_Res" type="Button" parent="Resources"]
-layout_mode = 0
-offset_top = 500.0
-offset_right = 1150.0
-offset_bottom = 650.0
-theme = SubResource("Theme_ly6we")
-text = "Hide Resources Tab
-"
-
-[node name="Spear_Up" type="Button" parent="Resources"]
-layout_mode = 0
-offset_left = 225.0
+offset_left = 350.0
 offset_top = 255.0
-offset_right = 445.0
+offset_right = 571.0
 offset_bottom = 320.0
 theme = ExtResource("2_vm37g")
-text = "Make a spear
-"
+text = "Smelt a metal bar"
 
-[node name="Bow_Up" type="Button" parent="Resources"]
+[node name="Brick_Up" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 340.0
-offset_right = 445.0
-offset_bottom = 405.0
-theme = ExtResource("2_vm37g")
-text = "Make a bow"
-
-[node name="Brick_Up" type="Button" parent="Resources"]
-layout_mode = 0
+offset_left = 350.0
 offset_top = 170.0
-offset_right = 220.0
+offset_right = 570.0
 offset_bottom = 235.0
 theme = ExtResource("2_vm37g")
 text = "Make a Brick"
 
-[node name="Arrow_Up" type="Button" parent="Resources"]
+[node name="Hide_Res_Tab" type="Button" parent="Resources/Resource"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 425.0
-offset_right = 445.0
-offset_bottom = 490.0
+offset_right = 250.0
+offset_bottom = 76.0
+theme = ExtResource("2_vm37g")
+text = "Hide Resources"
+
+[node name="Tools" type="Control" parent="Resources"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Axe_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 350.0
+offset_right = 570.0
+offset_bottom = 65.0
+theme = ExtResource("2_vm37g")
+text = "Make an axe"
+
+[node name="Dag_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 170.0
+offset_right = 570.0
+offset_bottom = 235.0
+theme = SubResource("Theme_nmlnp")
+text = "Make a dagger"
+
+[node name="Pick_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 85.0
+offset_right = 570.0
+offset_bottom = 150.0
+theme = ExtResource("2_vm37g")
+text = "Make a pickaxe"
+
+[node name="Bow_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 85.0
+offset_right = 820.0
+offset_bottom = 150.0
+theme = ExtResource("2_vm37g")
+text = "Make a bow"
+
+[node name="Spear_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 820.0
+offset_bottom = 65.0
+theme = ExtResource("2_vm37g")
+text = "Make a spear
+"
+
+[node name="Arrow_Up" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 170.0
+offset_right = 820.0
+offset_bottom = 235.0
 theme = ExtResource("2_vm37g")
 text = "Make an arrow"
 
-[node name="Forge_Up" type="Button" parent="Resources"]
+[node name="Hide_Tools_Tab" type="Button" parent="Resources/Tools"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 176.0
+theme = ExtResource("2_vm37g")
+text = "Hide Tools"
+
+[node name="Buildings" type="Control" parent="Resources"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Forge_Up" type="Button" parent="Resources/Buildings"]
 layout_mode = 0
 offset_left = 910.0
 offset_right = 1130.0
@@ -520,13 +553,46 @@ theme = ExtResource("2_vm37g")
 text = "Make a forge
 "
 
-[node name="Metal_Up" type="Button" parent="Resources"]
+[node name="Hide_Build_Tab" type="Button" parent="Resources/Buildings"]
 layout_mode = 0
-offset_top = 255.0
-offset_right = 221.0
-offset_bottom = 320.0
+offset_top = 200.0
+offset_right = 250.0
+offset_bottom = 276.0
 theme = ExtResource("2_vm37g")
-text = "Smelt a metal bar"
+text = "Hide Buildings"
+
+[node name="ResTab" type="Button" parent="Resources"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 76.0
+theme = ExtResource("2_vm37g")
+text = "Show Resources"
+
+[node name="ToolTab" type="Button" parent="Resources"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 176.0
+theme = ExtResource("2_vm37g")
+text = "Show Tools
+"
+
+[node name="BldTab" type="Button" parent="Resources"]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 250.0
+offset_bottom = 276.0
+theme = ExtResource("2_vm37g")
+text = "Show Buildings"
+
+[node name="Hide_Res" type="Button" parent="Resources"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 1170.0
+offset_bottom = 650.0
+theme = SubResource("Theme_ly6we")
+text = "Hide Resources Tab
+"
 
 [node name="Skills" type="Control" parent="."]
 visible = false
@@ -652,23 +718,29 @@ text = "Health: 10/10"
 [connection signal="pressed" from="Cooking/Hide_Cook" to="." method="_on_hide_cook_pressed"]
 [connection signal="pressed" from="Inventory/Hide_INV" to="." method="_on_hide_inv_pressed"]
 [connection signal="pressed" from="Recipes/Hide_Rec" to="." method="_on_hide_rec_pressed"]
-[connection signal="pressed" from="Resources/Axe_Up" to="." method="_on_axe_up_pressed"]
-[connection signal="pressed" from="Resources/Dag_Up" to="." method="_on_dag_up_pressed"]
-[connection signal="pressed" from="Resources/Ore_Up" to="." method="_on_ore_up_pressed"]
-[connection signal="pressed" from="Resources/Pick_Up" to="." method="_on_pick_up_pressed"]
-[connection signal="pressed" from="Resources/Stick_Up" to="." method="_on_stick_up_pressed"]
-[connection signal="pressed" from="Resources/Stone_Up" to="." method="_on_stone_up_pressed"]
-[connection signal="pressed" from="Resources/Raw_Meat_Up" to="." method="_on_raw_meat_up_pressed"]
-[connection signal="pressed" from="Resources/Raw_Meat_Up" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Resources/Vine_Up" to="." method="_on_vine_up_pressed"]
-[connection signal="pressed" from="Resources/Wood_Up" to="." method="_on_wood_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Stick_Up" to="." method="_on_stick_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Stone_Up" to="." method="_on_stone_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Vine_Up" to="." method="_on_vine_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Wood_Up" to="." method="_on_wood_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Raw_Meat_Up" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Resources/Resource/Raw_Meat_Up" to="." method="_on_raw_meat_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Ore_Up" to="." method="_on_ore_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Metal_Up" to="." method="_on_metal_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Brick_Up" to="." method="_on_brick_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Hide_Res_Tab" to="." method="_on_hide_res_tab_pressed"]
+[connection signal="pressed" from="Resources/Tools/Axe_Up" to="." method="_on_axe_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Dag_Up" to="." method="_on_dag_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Pick_Up" to="." method="_on_pick_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Bow_Up" to="." method="_on_bow_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Spear_Up" to="." method="_on_spear_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Arrow_Up" to="." method="_on_arrow_up_pressed"]
+[connection signal="pressed" from="Resources/Tools/Hide_Tools_Tab" to="." method="_on_hide_tools_tab_pressed"]
+[connection signal="pressed" from="Resources/Buildings/Forge_Up" to="." method="_on_forge_up_pressed"]
+[connection signal="pressed" from="Resources/Buildings/Hide_Build_Tab" to="." method="_on_hide_build_tab_pressed"]
+[connection signal="pressed" from="Resources/ResTab" to="." method="_on_res_tab_pressed"]
+[connection signal="pressed" from="Resources/ToolTab" to="." method="_on_tool_tab_pressed"]
+[connection signal="pressed" from="Resources/BldTab" to="." method="_on_bld_tab_pressed"]
 [connection signal="pressed" from="Resources/Hide_Res" to="." method="_on_hide_res_pressed"]
-[connection signal="pressed" from="Resources/Spear_Up" to="." method="_on_spear_up_pressed"]
-[connection signal="pressed" from="Resources/Bow_Up" to="." method="_on_bow_up_pressed"]
-[connection signal="pressed" from="Resources/Brick_Up" to="." method="_on_brick_up_pressed"]
-[connection signal="pressed" from="Resources/Arrow_Up" to="." method="_on_arrow_up_pressed"]
-[connection signal="pressed" from="Resources/Forge_Up" to="." method="_on_forge_up_pressed"]
-[connection signal="pressed" from="Resources/Metal_Up" to="." method="_on_metal_up_pressed"]
 [connection signal="pressed" from="Skills/Hide_Skill" to="." method="_on_hide_skill_pressed"]
 [connection signal="pressed" from="Main_Form/Show_Res" to="." method="_on_show_res_pressed"]
 [connection signal="pressed" from="Main_Form/Show_Skill" to="." method="_on_show_skill_pressed"]
