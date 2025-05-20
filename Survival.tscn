@@ -98,6 +98,7 @@ text = "Hide Cooking Tab
 "
 
 [node name="Inventory" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -470,7 +471,7 @@ offset_top = 170.0
 offset_right = 570.0
 offset_bottom = 235.0
 theme = ExtResource("2_vm37g")
-text = "Make a Brick"
+text = "Make a brick"
 
 [node name="Hide_Res_Tab" type="Button" parent="Resources/Resource"]
 layout_mode = 0
@@ -642,7 +643,6 @@ text = "Hide Skills Tab
 "
 
 [node name="Main_Form" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -731,8 +731,8 @@ text = "Health: 10/10"
 [connection signal="pressed" from="Resources/Resource/Stone_Up" to="." method="_on_stone_up_pressed"]
 [connection signal="pressed" from="Resources/Resource/Vine_Up" to="." method="_on_vine_up_pressed"]
 [connection signal="pressed" from="Resources/Resource/Wood_Up" to="." method="_on_wood_up_pressed"]
-[connection signal="pressed" from="Resources/Resource/Raw_Meat_Up" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Resources/Resource/Raw_Meat_Up" to="." method="_on_raw_meat_up_pressed"]
+[connection signal="pressed" from="Resources/Resource/Raw_Meat_Up" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Resources/Resource/Ore_Up" to="." method="_on_ore_up_pressed"]
 [connection signal="pressed" from="Resources/Resource/Metal_Up" to="." method="_on_metal_up_pressed"]
 [connection signal="pressed" from="Resources/Resource/Brick_Up" to="." method="_on_brick_up_pressed"]

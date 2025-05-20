@@ -116,6 +116,8 @@ func _on_axe_up_pressed() -> void:
 		Update_Stone()
 		Update_Stick()
 		$Inventory/Axe_INV.text = "Axe: " + str(axe) + "                  " + str(axe_hth) + "/8"
+	elif stick < 3 or stone < 2:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_wood_up_pressed() -> void:
@@ -183,6 +185,8 @@ func _on_pick_up_pressed() -> void:
 		Update_Stone()
 		Update_Stick()
 		$Inventory/Pick_INV.text = "Pickaxe: "  + str(pick) + "           " + str(pick_hth) + "/8"
+	elif stone < 3 or stick < 3:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 # Hiding/Showing Various Tabs
 func _on_show_skill_pressed() -> void:
@@ -282,6 +286,8 @@ func _on_dag_up_pressed() -> void:
 		$Inventory/Dag_INV.text = "Dagger: "  + str(dagger) + "           " + str(dagger_hth) + "/4"
 		Update_Stone()
 		Update_Stick()
+	elif stone < 1 or stick < 1:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_raw_meat_up_pressed() -> void:
@@ -388,6 +394,8 @@ func _on_spear_up_pressed() -> void:
 		wood -= 2
 		stone -= 1
 		$Inventory/Spear_INV.text = "Spear: " + str(spear)
+	elif stone < 1 or wood < 2:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_vine_up_pressed() -> void:
@@ -409,8 +417,8 @@ func _on_brick_up_pressed() -> void:
 		stone -= 4
 		Update_Stone()
 		$Inventory/Brick_INV.text = "Brick: " + str(brick)
-	else:
-		OS.alert("You need atleast 4 stone to make this")
+	elif stone < 4:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_bow_up_pressed() -> void:
@@ -422,8 +430,8 @@ func _on_bow_up_pressed() -> void:
 		$Inventory/Vine_INV.text = "Vine: " + str(vine)
 		$Inventory/Bow_INV.text = "Bow: " + str(bow)
 		bow_hth = 12
-	elif stick < 4 and vine < 3:
-		OS.alert("You don't have enough sticks or vines")
+	elif stick < 4 or vine < 3:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_arrow_up_pressed() -> void:
@@ -432,13 +440,18 @@ func _on_arrow_up_pressed() -> void:
 		Update_Stick()
 		Update_Stone()
 		$Inventory/Arrow_INV.text = "Arrow: " + str(arrow)
+	elif stick < 1 or stone < 1:
+		OS.alert("You don't have enough resources: Check the recipe tab")
 
 
 func _on_forge_up_pressed() -> void:
-	if brick >= 30 and forge == 0:
-		forge = 1
-	elif forge == 1:
+	if forge == 1:
 		OS.alert("You can only have one forge!")
+	elif brick >= 30 and forge == 0:
+		forge = 1
+	elif brick < 30:
+		OS.alert("You don't have enough resources: Check the recipe tab")
+
 
 
 func _on_metal_up_pressed() -> void:
